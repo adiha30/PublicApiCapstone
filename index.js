@@ -14,10 +14,8 @@ app.get('/get-image', async (req, res) => {
     try {
         const response = await axios.get('https://dog.ceo/api/breeds/image/random');
         const imageUrl = response.data.message;
-        console.log('Image URL:', imageUrl); // Add this line
         res.render('index.ejs', { url: imageUrl });
     } catch (error) {
-        console.error('Error fetching image:', error); // Add this line
         res.render('index.ejs', { error: error });
     }
 });
