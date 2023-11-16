@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API Website</title>
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <title>Random dog image generator</title>
 </head>
 <body>
+    <h1>Random dog image generator</h1>
     <button id="btn" onclick="window.location.href='/get-image'">Click Me</button>
     <% if (locals.url) { %>
-        <img src="<%- url %>" alt="image">
+        <div class="image-container">
+            <img src="<%= url %>" alt="image">
+        </div>
     <% } %>
 
     <% if (locals.error) { %>
