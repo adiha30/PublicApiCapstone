@@ -6,6 +6,13 @@
     <title>API Website</title>
 </head>
 <body>
-    <h1>Hi!</h1>
+    <button id="btn" onclick="window.location.href='/get-image'">Click Me</button>
+    <% if (locals.url) { %>
+        <img src="<%- url %>" alt="image">
+    <% } %>
+
+    <% if (locals.error) { %>
+        <h2>Error has occurred: <%= error %></h2>
+    <% } %>
 </body>
 </html>
