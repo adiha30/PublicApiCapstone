@@ -25,6 +25,7 @@ button {
     width: 300px;
     height: 300px;
     overflow: hidden;
+}
 
 h1 {
     position: fixed;
@@ -32,6 +33,12 @@ h1 {
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 2em;
     font-weight: bold;
     background-color: #f0f0f0;
