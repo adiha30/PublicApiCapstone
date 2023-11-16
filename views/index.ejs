@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css" type="text/css">
-    <title>Random dog image generator</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <title>Dog Images Generator</title>
 </head>
 <body>
     <h1>Random dog image generator</h1>
     <button id="btn" onclick="window.location.href='/get-image'">Click Me</button>
     <% if (locals.url) { %>
         <div class="image-container">
-            <img src="<%= url %>" alt="image">
+            <img src="<%- url %>" alt="Image couldn't be shown. Try again">
         </div>
     <% } %>
 
     <% if (locals.error) { %>
-        <h2>Error has occurred: <%= error %></h2>
+        <h2>Error has occurred: <%- error %></h2>
     <% } %>
 </body>
 </html>
